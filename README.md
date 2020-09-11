@@ -26,7 +26,7 @@ THEN I can save my initials and score
 The app has 1 page which is index.html.there is 1 Javascript file. And, stylesheet for Styling the app.
 
 ## Accessing the site
-Please visit [my website]().
+Please visit [my website](https://eli-33.github.io/Quiz.github.io/).
 
 
 ## Screenshot
