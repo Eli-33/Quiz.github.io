@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="Assets/CSS/Style.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>JAVA</h1>
+    </header>
+
+    <div id="card">
+    <div id= "container">
+        <!-- first page for start -->
+        <button id="start">start Quiz</button>
+        <!-- for all the progress of quiz -->
+        <div Id="quiz" style= "display: none;">
+            <!-- the questions -->
+            <div id="question"></div>
+             <!-- for answers -->
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkanswer('A')"></div>
+                <div class="choice" id="B" onclick="checkanswer('B')"></div>
+                <div class="choice" id="C" onclick="checkanswer('C')"></div>
+            </div>
+            <div id="progress" ></div>
+            <!-- for our timer -->
+            <div id="timer">
+                  <div id="counter">15</div>
+                  <div id="btimeGauge"></div>
+                  <div id="timeGauge"></div>
+            </div>
+
+           
+        </div>
+        <div id="score" style= "display: none;">
+            Your total score is:
+        </div>
+
+    </div>
+</div>
+    <script src="Assets/JS/quiz.js"></script>
+</body>
+</html>
