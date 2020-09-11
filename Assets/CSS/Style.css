@@ -118,11 +118,18 @@ button{
     right : 0px;
     padding:5px;
     text-align: right;
-    color: rgb(0, 0, 0);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;  
+   
 }
-
+#correct{
+    color: rgb(18, 139, 73);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold; 
+}
+#wrong{ 
+    color: rgb(218, 25, 25);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold; 
+}
 
 #score{
     margin :  auto;

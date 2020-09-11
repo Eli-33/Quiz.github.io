@@ -10,6 +10,8 @@
  var counter = document.getElementById("counter"); 
  var timeGauge = document.getElementById("timeGauge"); 
  var progress = document.getElementById("progress"); 
+ var correct = document.getElementById("correct");
+ var wrong = document.getElementById("wrong");
  var scoreDiv = document.getElementById("score"); 
  
 
@@ -174,13 +176,11 @@ let score = 0;
 
 
 Start.addEventListener("click",startQuiz);
-
 //  start quiz
 function startQuiz() {
     start.style.display = "none";
-    renderQuestion();
     quiz.style.display = "block";
-    renderProgress();
+    renderQuestion();
     renderCounter();
     TIMER = setInterval(renderCounter , 1000); // 1000ms = 1s
 }
@@ -197,19 +197,6 @@ function renderQuestion(){
 
 }
 
-
-
-//  Function for render progress
-
-function renderProgress(){
-
-    for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
-
-        progress.innerHTML = progress.innerHTML + "<div class='prog' id="+ qIndex +"></div>";
-
-    }
-
-}
 //  counter render
 function renderCounter() {
     if (count <= questionTime){
@@ -219,7 +206,7 @@ function renderCounter() {
     }else{
         count = 0;
         // change the progress and show wrong
-        answerIsWrong()
+        answerWrong()
     if (runningQuestion< lastQuestion){
           runningQuestion++;
           renderQuestion();
@@ -236,11 +223,11 @@ function checkanswer(answer) {
         //  answer is correct
         score++;
         // change the progress color to green
-        answerIsCorrect()
+        answerCorrect()
     }else {
         // answer is wrong
         // change the progress color to red
-        answerIsWrong()
+        answerWrong()
     }
     count = 0;
     if (runningQuestion< lastQuestion){
@@ -255,15 +242,19 @@ function checkanswer(answer) {
 }
 
 // answer is correct
-function answerIsCorrect() {
-    document.getElementById(runningQuestion).style.color ="green";
+function answerCorrect() {
+    console.log("answerCorrect()");
+    correct.style.display="block";
+    wrong.style.display="none";
     
 }
 
 // answer is wrong
-function answerIsWrong() {
-    document.getElementById(runningQuestion).style.color ="red";
-    
+function answerWrong() {
+   console.log("answerWrong()");
+   wrong.style.display="block";
+   correct.style.display="none";
+
 }
 
 var scoreCo = 0;

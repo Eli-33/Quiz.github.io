@@ -18,7 +18,7 @@
         <!-- first page for start -->
         <button id="start">start Quiz</button>
         <!-- for all the progress of quiz -->
-        <div Id="quiz" style= "display: none;">
+        <div id="quiz" style= "display: none;">
             <!-- the questions -->
             <div id="question"></div>
              <!-- for answers -->
@@ -27,7 +27,10 @@
                 <div class="choice" id="B" onclick="checkanswer('B')"></div>
                 <div class="choice" id="C" onclick="checkanswer('C')"></div>
             </div>
-            <div id="progress" ></div>
+            <div id="progress">
+                <p id="correct"  style= "display: none;">correct</p>
+                <p id="wrong"  style= "display: none;">wrong</p>
+            </div>
             <!-- for our timer -->
             <div id="timer">
                   <div id="counter">15</div>
